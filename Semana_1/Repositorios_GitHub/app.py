@@ -19,12 +19,12 @@ server = app.server
 app.config.suppress_callback_exceptions = True
 
 
-# Load data from csv
+# Load data from csv - Nueva funcion para cargar datos
 def load_data():
-    data = pd.read_csv('datos_energia.csv')
-    data['time'] = pd.to_datetime(data['time'])
-    data = data.set_index('time')
-    return data
+    df = pd.read_csv('datos_energia.csv')
+    df['time'] = pd.to_datetime(df['time'])
+    df = df.set_index('time')
+    return df
 
 # Cargar datos
 data = load_data()
@@ -242,4 +242,4 @@ def update_output_div(date, hour, proy):
 
 # Run the server
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
+    app.run(debug=True)
