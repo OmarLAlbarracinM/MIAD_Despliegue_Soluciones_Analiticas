@@ -1,3 +1,3 @@
 Archivo para evidenciar cambio de nueva rama
 
-Cambio #2 para la sincronizaciongit 
+Cambio #2 para la sincronizacion
